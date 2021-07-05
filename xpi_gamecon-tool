@@ -6,7 +6,7 @@ do
 	TEMP=`cat /sys/class/thermal/thermal_zone0/temp`
 	echo $TEMP
 	echo $VOL
-	amixer set Headphone $VOL%
+	amixer -M set Headphone $VOL%
 	if [[ $TEMP -gt 70000 ]]  
 	then
 		echo 100 > /sys/kernel/xpi_gamecon/fan
