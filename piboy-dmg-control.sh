@@ -11,6 +11,6 @@ do
 	then
 		echo 100 > /sys/kernel/xpi_gamecon/fan
 	else
-		echo 100 > /sys/kernel/xpi_gamecon/fan 
+		echo 0 > /sys/kernel/xpi_gamecon/fan 
 	fi
 done
