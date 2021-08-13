@@ -5,9 +5,8 @@ do
 	sleep 1
 	VOL=`cat /sys/kernel/xpi_gamecon/volume`
 	TEMP=`cat /sys/class/thermal/thermal_zone0/temp`
-	SHUTDOWN=`cat /sys/kernel/xpi_gamecon/status`
-	echo $TEMP
-	echo $VOL
+	POWERSW=`cat /sys/kernel/xpi_gamecon/status`
+	BATTERY=`cat /sys/kernel/xpi_gamecon/percent`
 	amixer -M set Headphone $VOL%
 	if [[ $TEMP -gt 70000 ]]  
 	then
@@ -15,10 +14,16 @@ do
 	else
 		echo 0 > /sys/kernel/xpi_gamecon/fan 
 	fi
-	if [[ $SHUTDOWN -eq 6 ]]
+	if [[ $POWERSW -eq 6 ]]
 	then
 		echo "0" > /sys/kernel/xpi_gamecon/flags
 		/usr/sbin/rmmod xpi_gamecon
 		/usr/sbin/poweroff
 	fi
+	if [[ $BATTERY -lt 5 ]]
+	then
+                echo "0" > /sys/kernel/xpi_gamecon/flags
+                /usr/sbin/rmmod xpi_gamecon
+                /usr/sbin/poweroff
+        fi
 done
