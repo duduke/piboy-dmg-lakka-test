@@ -23,7 +23,7 @@ To configure LAKKA WIFI, goto **Settings -> Wi-Fi**. Or watch this: (https://www
 10. Download the PiBoy DMG kernel module: 
   * `wget https://github.com/duduke/piboy-dmg-lakka-test/raw/main/xpi_gamecon.ko`
 11. Download the PiBoy DMG control script:
-  * `curl "https://raw.githubusercontent.com/duduke/piboy-dmg-lakka-test/main/piboy-dmg-control.sh"`
+  * `wget "https://raw.githubusercontent.com/duduke/piboy-dmg-lakka-test/main/piboy-dmg-control.sh"`
   * `chmod +x /storage/roms/piboy-dmg/piboy-dmg-control.sh`
 12. Download and install the PiBoy DMG control systemd service: 
   * `cd /storage/.config/system.d` 
