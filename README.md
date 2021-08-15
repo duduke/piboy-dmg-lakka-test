@@ -34,6 +34,9 @@ To configure LAKKA WIFI, goto **Settings -> Wi-Fi**. Or watch this: (https://www
   * `cd /storage/joypads/udev`
   * `curl "https://raw.githubusercontent.com/duduke/piboy-dmg-lakka-test/main/PiBoy%20DMG%20Controller.cfg" --output "PiBoy DMG Controller.cfg"`
 14. At this point, reboot or shutdown. The next time LAKKA will boot, everything should be working.
+15. (Optional) You can further customize the boot sequence to have a custom LAKKA + Experimental Pi Logo:
+  * Download this file: https://github.com/duduke/piboy-dmg-lakka-test/blob/main/oemsplash.png
+  * Save it to LAKKA boot partition (same as in step 3).
 
 ## Current Status
 
