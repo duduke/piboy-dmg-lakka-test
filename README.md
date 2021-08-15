@@ -2,6 +2,13 @@
 
 As someone who's been using LAKKA for several years now, the first thing I wanted when I got my PiBoy was to run LAKKA.
 Unfortunately, the way PiBoy is built and the fact that LAKKA is based on LibreELEC, meant that it was not supported out-of-the-box.
+LAKKA is a bit less customizable than RetroPie, but what it lacks in customizability, it more than makes up for in speed.
+
+Look at this, from poweroff to main menu in well under 20 seconds:
+
+https://user-images.githubusercontent.com/70735/129489260-1b6107d0-7cd3-449f-afc1-020bc18ef7a2.mp4
+
+
 
 So, with the help of Nathan Scherdin (@acidtech), i've got most of the important stuff working.
 
